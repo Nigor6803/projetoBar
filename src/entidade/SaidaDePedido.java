@@ -7,10 +7,10 @@ public class SaidaDePedido {
 	
 	private ProdutoDaCasa prodDaCasa; 
 	
-	private SaidaDePedido() {
+	public SaidaDePedido() {
 		}
 	
-	private SaidaDePedido(Integer quantidade,Double valor,ProdutoDaCasa prodDaCasa) {
+	public SaidaDePedido(Integer quantidade,Double valor,ProdutoDaCasa prodDaCasa) {
 		this.quantidade = quantidade;
 		this.valor = valor;
 		this.prodDaCasa = prodDaCasa;
@@ -47,10 +47,10 @@ public class SaidaDePedido {
 	@Override
 	public String toString() {
 		return getprodutoDaCasa().getProduto()
-				+ String.format("%.2f", valor)
+				+ String.format(" %.2f", valor)
 				+" , QUANTIDADE:"
 				+quantidade
-				+"SUBTOTAL:"
-				+String.format("%.2f", subTotal());
+				+", SUBTOTAL:"
+				+String.format("R$"+"%.2f", subTotal());
 	}
 }

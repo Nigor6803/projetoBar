@@ -66,7 +66,7 @@ public class Conta {
 	public double contaTotal() {
 		double soma = 0;
 		for(SaidaDePedido it: item) {
-			soma += it.getValor();
+			soma += it.subTotal();
 		}
 		return soma;
 	}

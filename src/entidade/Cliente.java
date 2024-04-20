@@ -10,10 +10,10 @@ public class Cliente {
 	private String email;
 	private Date diaDoAniversario;
 		
-	private Cliente() {
+	public Cliente() {
 		}
 	
-	private Cliente (String nome,String email,Date diaDoAniversario) {
+	public Cliente (String nome,String email,Date diaDoAniversario) {
 		this.nome = nome;
 		this.email = email;
 		this.diaDoAniversario = diaDoAniversario;
