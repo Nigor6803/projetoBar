@@ -70,4 +70,23 @@ public class Conta {
 		}
 		return soma;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("MOMENTO DO PEDIDO:");
+		sb.append(sdf.format(momentoDoPedido)+"\n");
+		sb.append("STATUS DO PEDIDO:");
+		sb.append(statusCliente+"\n");
+		sb.append("CLIENTE:");
+		sb.append(cliente+"\n");
+		sb.append("ORDEM DOS PEDIDOS:\n");
+		for(SaidaDePedido item: item) {
+			sb.append(item);
+			sb.append("\n");
+		}
+		sb.append("VALOR FINAL: $");
+		sb.append(String.format("%.2f", contaTotal()));
+		return sb.toString();
+	}
 }
