@@ -5,12 +5,15 @@ public class SaidaDePedido {
 	private Integer quantidade;
 	private Double valor;
 	
+	private ProdutoDaCasa prodDaCasa; 
+	
 	private SaidaDePedido() {
 		}
 	
-	private SaidaDePedido(Integer quantidade,Double valor) {
+	private SaidaDePedido(Integer quantidade,Double valor,ProdutoDaCasa prodDaCasa) {
 		this.quantidade = quantidade;
 		this.valor = valor;
+		this.prodDaCasa = prodDaCasa;
 	}
 
 	public Integer getQuantidade() {
@@ -33,8 +36,21 @@ public class SaidaDePedido {
 		return quantidade*valor;
 	}
 	
+	public ProdutoDaCasa getprodutoDaCasa() {
+		return prodDaCasa;
+	}
+	
+	public void setProdDaCasa(ProdutoDaCasa prodDaCasa) {
+		this.prodDaCasa = prodDaCasa;
+	}
+
 	@Override
 	public String toString() {
-		return
+		return getprodutoDaCasa().getProduto()
+				+ String.format("%.2f", valor)
+				+" , QUANTIDADE:"
+				+quantidade
+				+"SUBTOTAL:"
+				+String.format("%.2f", subTotal());
 	}
 }
