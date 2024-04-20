@@ -42,6 +42,8 @@ public class Cliente {
 	public void setDiaDoAniversario(Date diaDoAniversario) {
 		this.diaDoAniversario = diaDoAniversario;
 	}
-	
-	
+	@Override
+	public String toString(){
+		return nome+ " ("+ sdf.format(diaDoAniversario)+") - " + email;
+	}
 }
